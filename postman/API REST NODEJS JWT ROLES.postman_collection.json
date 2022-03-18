@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "afd8cd35-f25d-4ffc-bfe4-3ae5900ef43c",
+		"name": "API REST NODEJS JWT ROLES",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PRODUCTS",
+			"item": [
+				{
+					"name": "/api//products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/products",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzRhZmU1OWQ3NGI5ZGFlODIxNTlkMyIsImlhdCI6MTY0NzYyMjc5OCwiZXhwIjoxNjQ3NzA5MTk4fQ.KOB6N2tDOFRxrIKXuBMMiFWNgo6qHay_xD0Ih3_I-Yw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"lenovo3\",\r\n    \"category\": \"lenovo\",\r\n    \"price\": 890\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/products/:productId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"lenovo2\",\r\n    \"category\": \"lenovo\",\r\n    \"price\": 890\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/products/6234b385b460a714b3543d5d?x-access-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzRhZmU1OWQ3NGI5ZGFlODIxNTlkMyIsImlhdCI6MTY0NzYyMjc5OCwiZXhwIjoxNjQ3NzA5MTk4fQ.KOB6N2tDOFRxrIKXuBMMiFWNgo6qHay_xD0Ih3_I-Yw",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"6234b385b460a714b3543d5d"
+							],
+							"query": [
+								{
+									"key": "x-access-token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzRhZmU1OWQ3NGI5ZGFlODIxNTlkMyIsImlhdCI6MTY0NzYyMjc5OCwiZXhwIjoxNjQ3NzA5MTk4fQ.KOB6N2tDOFRxrIKXuBMMiFWNgo6qHay_xD0Ih3_I-Yw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/products/:productId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/products/6234b357b460a714b3543d5b",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"6234b357b460a714b3543d5b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/products/:productId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzUwZDVkNjI4NTY3ZTI1NmI3NjgwZSIsImlhdCI6MTY0NzY0NDE2OSwiZXhwIjoxNjQ3NzMwNTY5fQ.dbzSHVR6w2OTdjM3aI55fgflMINUKRou0gjBiEejTvs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/products/6234bb5820ab0ef199a88926",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"6234bb5820ab0ef199a88926"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "/api/auth/signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"sorz3@gmail.com\",\r\n    \"password\": \"qwerty\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/auth/signin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/auth/signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"sorz3\",\r\n    \"email\": \"sorz3@gmail.com\",\r\n    \"password\": \"qwerty\",\r\n    \"roles\": [\"moderator\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "/api/users/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzUwZDgxNjI4NTY3ZTI1NmI3NjgxNCIsImlhdCI6MTY0NzY0NDg4MCwiZXhwIjoxNjQ3NzMxMjgwfQ.Xz7yvfnmnIPj5MOS_ZHkuHBUSNXfVRxkvnXyETlf1aM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"sorz3\",\r\n    \"email\": \"sorz4@gmail.com\",\r\n    \"password\": \"qwerty\",\r\n    \"roles\": [\"moderator\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/users/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
